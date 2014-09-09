@@ -1,0 +1,33 @@
+<?php
+/*
+  Module Name :Test
+  Description : This is a Custom Sign Up page.
+  Author :Krijesh PV.
+  Emp ID :5718
+  Created Date :Sep 08 2014
+
+*/
+//Menu function
+  function test_menu() {
+    $items = array();
+    $items['test/add'] = array (
+      'title' => 'Add User Information',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('add_test'),
+      'access arguments' => array('add test'),
+      'file' => 'test.pages.inc',
+      'type' => MENU_CALLBACK,
+    );
+	return $items;
+  }
+   
+function test_permission() {
+
+  return array(
+    'add test' => array(
+      'title' => t('test me'),
+      'descrition' => t('test me'),
+      ),
+	  ) ; 
+  }
+  

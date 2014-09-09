@@ -1,0 +1,4 @@
+name = Test
+description = "New Signup Page"
+package = Custom Module
+core = 7.x

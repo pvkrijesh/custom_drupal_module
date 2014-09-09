@@ -1,0 +1,28 @@
+<?php
+/**
+ * test install file.
+ */
+function test_schema() {
+  $schema=array();
+  $schema['test_org'] = array(
+    'description' => 'Test table',
+    'fields' => array(
+      'first_name' => array(
+        'description' => 'First Name.',
+        'type' => 'varchar',
+        'length' => '60',
+       'not null' => FALSE,
+      ),
+      'last_name' => array(
+        'description' => 'Last Name',
+        'type' => 'varchar',
+        'length' => '60',
+        'not null' => FALSE,
+      )  
+  ));
+  return $schema;
+}
+function test_install() {
+  // Create my tables.
+  drupal_install_schema('test_org');
+}
